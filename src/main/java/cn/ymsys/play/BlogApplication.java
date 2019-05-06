@@ -16,14 +16,11 @@ import com.jyd.common.model._MappingKit;
 @EnableApi2Doc
 public class BlogApplication {
 
-	public static void main(String[] args) {
-
-		SpringApplication.run(BlogApplication.class, args);
-
-		ActiveRecordPlugin arp = new ActiveRecordPlugin(_JFinalDemoGenerator.getDataSource());
-		_MappingKit.mapping(arp);
-		arp.start();
-
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BlogApplication.class, args);
+        ActiveRecordPlugin arp = new ActiveRecordPlugin(_JFinalDemoGenerator.getDataSource());
+        _MappingKit.mapping(arp);
+        arp.start();
+    }
 
 }
