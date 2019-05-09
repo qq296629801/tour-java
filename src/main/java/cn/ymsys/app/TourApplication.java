@@ -1,4 +1,4 @@
-package cn.ymsys.play;
+package cn.ymsys.app;
 
 import com.terran4j.commons.api2doc.config.EnableApi2Doc;
 import org.springframework.boot.SpringApplication;
@@ -14,10 +14,10 @@ import com.jyd.common.model._MappingKit;
 @SpringBootApplication
 @EnableAsync
 @EnableApi2Doc
-public class BlogApplication {
+public class TourApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BlogApplication.class, args);
+        SpringApplication.run(TourApplication.class, args);
         ActiveRecordPlugin arp = new ActiveRecordPlugin(_JFinalDemoGenerator.getDataSource());
         _MappingKit.mapping(arp);
         arp.start();
