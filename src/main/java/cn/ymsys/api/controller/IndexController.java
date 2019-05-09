@@ -2,14 +2,13 @@ package cn.ymsys.api.controller;
 
 import cn.ymsys.api.service.BaiduOrcService;
 import cn.ymsys.api.service.PhotoService;
-import cn.ymsys.request.CompanyRequest;
-import cn.ymsys.response.JsonResponse;
+import cn.ymsys.common.request.CompanyRequest;
+import cn.ymsys.common.response.JsonResponse;
 import com.terran4j.commons.api2doc.annotations.Api2Doc;
 import com.terran4j.commons.api2doc.annotations.ApiComment;
 import com.terran4j.commons.api2doc.annotations.ApiError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

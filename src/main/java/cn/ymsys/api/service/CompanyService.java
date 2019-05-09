@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jfinal.plugin.activerecord.Page;
 import com.jyd.common.model.BuUCompany;
 
-import cn.ymsys.request.CompanyRequest;
-import cn.ymsys.util.Const;
+import cn.ymsys.common.request.CompanyRequest;
+import cn.ymsys.common.util.Const;
 
 @Service
 public class CompanyService {

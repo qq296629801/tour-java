@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 import com.baidu.aip.util.Base64Util;
 
 import cn.ymsys.api.dao.BaiduOrcDao;
-import cn.ymsys.util.AuthService;
-import cn.ymsys.util.FileUtil;
-import cn.ymsys.util.HttpUtil;
+import cn.ymsys.common.util.AuthService;
+import cn.ymsys.common.util.FileUtil;
+import cn.ymsys.common.util.HttpUtil;
 
 @Component("IdCardDaoImpl")
 public class IdCardDaoImpl implements BaiduOrcDao {

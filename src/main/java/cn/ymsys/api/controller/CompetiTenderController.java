@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cn.ymsys.api.service.CompetiTenderService;
-import cn.ymsys.request.CompetiRequest;
-import cn.ymsys.response.JsonResponse;
+import cn.ymsys.common.request.CompetiRequest;
+import cn.ymsys.common.response.JsonResponse;
 
 @RestController
 @RequestMapping("/competi")

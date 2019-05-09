@@ -9,8 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jfinal.plugin.activerecord.Page;
 import com.jyd.common.model.BuUCompetitiveTender;
 
-import cn.ymsys.request.CompetiRequest;
-import cn.ymsys.util.Const;
+import cn.ymsys.common.request.CompetiRequest;
+import cn.ymsys.common.util.Const;
 
 @Service
 public class CompetiTenderService {

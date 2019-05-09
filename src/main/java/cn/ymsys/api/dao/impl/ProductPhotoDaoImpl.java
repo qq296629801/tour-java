@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import com.jyd.common.model.BuPhoto;
 
 import cn.ymsys.api.dao.PhotoDao;
-import cn.ymsys.enums.BaseEnum;
+import cn.ymsys.common.enums.BaseEnum;
 
 @Component("ProductPhotoDaoImpl")
 public class ProductPhotoDaoImpl extends PhotoDao {

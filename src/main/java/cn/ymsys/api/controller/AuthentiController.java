@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cn.ymsys.api.service.AuthentiService;
-import cn.ymsys.request.AuthentiRequest;
-import cn.ymsys.response.JsonResponse;
+import cn.ymsys.common.request.AuthentiRequest;
+import cn.ymsys.common.response.JsonResponse;
 
 /**
  * 

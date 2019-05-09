@@ -37,7 +37,18 @@
 			<artifactId>hutool-all</artifactId>
 			<version>4.5.9</version>
 		</dependency>
-
+		<!-- commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<!-- tk.mybatis -->
+		<!-- https://mvnrepository.com/artifact/tk.mybatis/mapper -->
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper</artifactId>
+			<version>4.1.5</version>
+		</dependency>
 		<!-- shiro-spring -->
 		<dependency>
 			<groupId>org.apache.shiro</groupId>

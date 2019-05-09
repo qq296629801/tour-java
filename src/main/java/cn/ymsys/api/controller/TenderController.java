@@ -2,15 +2,13 @@ package cn.ymsys.api.controller;
 
 import cn.ymsys.api.service.PhotoService;
 import cn.ymsys.api.service.TenderService;
-import cn.ymsys.request.ProductRequest;
-import cn.ymsys.request.TenderRequest;
+import cn.ymsys.common.request.TenderRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.ymsys.request.UserRequest;
-import cn.ymsys.response.JsonResponse;
+import cn.ymsys.common.response.JsonResponse;
 
 @RestController
 @RequestMapping("/tender")

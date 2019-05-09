@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.jyd.common.model.SysAd;
 
-import cn.ymsys.request.SysAdRequest;
+import cn.ymsys.common.request.SysAdRequest;
 
 @Service
 public class AdService {

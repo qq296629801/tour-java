@@ -7,9 +7,9 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import cn.ymsys.enums.ExceptionEnum;
-import cn.ymsys.util.Const;
-import cn.ymsys.util.OwnException;
+import cn.ymsys.common.enums.ExceptionEnum;
+import cn.ymsys.common.util.Const;
+import cn.ymsys.common.util.OwnException;
 
 @Service
 public class FileService {

@@ -8,10 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.jyd.common.model.SysUser;
 
-import cn.ymsys.enums.ExceptionEnum;
-import cn.ymsys.request.UserRequest;
-import cn.ymsys.util.DataUtil;
-import cn.ymsys.util.OwnException;
+import cn.ymsys.common.request.UserRequest;
 
 @Service
 public class UserService {

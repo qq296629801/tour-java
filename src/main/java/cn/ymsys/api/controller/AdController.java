@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cn.ymsys.api.service.AdService;
-import cn.ymsys.request.SysAdRequest;
-import cn.ymsys.response.JsonResponse;
+import cn.ymsys.common.request.SysAdRequest;
+import cn.ymsys.common.response.JsonResponse;
 
 @RestController
 @RequestMapping("/ad")

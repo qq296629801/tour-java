@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cn.ymsys.api.service.PhotoService;
 import cn.ymsys.api.service.ProductService;
-import cn.ymsys.request.ProductRequest;
-import cn.ymsys.response.JsonResponse;
+import cn.ymsys.common.request.ProductRequest;
+import cn.ymsys.common.response.JsonResponse;
 
 @RestController
 @RequestMapping("/product")

@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jfinal.plugin.activerecord.Page;
 import com.jyd.common.model.BuUAuthentication;
 
-import cn.ymsys.request.AuthentiRequest;
-import cn.ymsys.util.Const;
+import cn.ymsys.common.request.AuthentiRequest;
+import cn.ymsys.common.util.Const;
 
 @Service
 public class AuthentiService {

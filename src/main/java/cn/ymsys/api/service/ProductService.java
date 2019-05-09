@@ -1,10 +1,8 @@
 package cn.ymsys.api.service;
 
-import cn.ymsys.enums.ExceptionEnum;
-import cn.ymsys.request.ProductRequest;
-import cn.ymsys.util.Const;
-import cn.ymsys.util.DataUtil;
-import cn.ymsys.util.OwnException;
+import cn.ymsys.common.request.ProductRequest;
+import cn.ymsys.common.util.Const;
+import cn.ymsys.common.util.OwnException;
 
 import com.jfinal.plugin.activerecord.Page;
 import com.jyd.common.model.BuUProduct;

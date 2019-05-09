@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jyd.common.model.BuPhoto;
 
 import cn.ymsys.api.dao.PhotoDao;
-import cn.ymsys.request.BuPhotoRequest;
+import cn.ymsys.common.request.BuPhotoRequest;
 
 @Service
 public class PhotoService {

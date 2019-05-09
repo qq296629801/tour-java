@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.jyd.common.model.BuPhoto;
 
-import cn.ymsys.enums.BaseEnum;
+import cn.ymsys.common.enums.BaseEnum;
 
 public abstract class PhotoDao {
 	public abstract List<BuPhoto> findPhotos(int id);
