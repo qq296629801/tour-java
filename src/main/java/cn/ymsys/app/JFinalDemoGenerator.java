@@ -1,4 +1,4 @@
-package com.jyd.common.model;
+package cn.ymsys.app;
 
 import java.util.ResourceBundle;
 
@@ -14,7 +14,7 @@ import com.jfinal.plugin.druid.DruidPlugin;
  * 
  * 在数据库表有任何变动时，运行一下 main 方法，极速响应变化进行代码重构
  */
-public class _JFinalDemoGenerator {
+public class JFinalDemoGenerator {
 
 	public static DataSource getDataSource() {
 		ResourceBundle bundle = ResourceBundle.getBundle("application");

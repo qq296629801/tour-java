@@ -1,6 +1,6 @@
 package cn.ymsys.common.request;
 
-import com.jyd.common.model.SysAd;
+import cn.ymsys.common.model.SysAd;
 
 public class SysAdRequest extends SysAd {
 	private int page;

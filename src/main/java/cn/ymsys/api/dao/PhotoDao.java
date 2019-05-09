@@ -2,7 +2,7 @@ package cn.ymsys.api.dao;
 
 import java.util.List;
 
-import com.jyd.common.model.BuPhoto;
+import cn.ymsys.common.model.BuPhoto;
 
 import cn.ymsys.common.enums.BaseEnum;
 

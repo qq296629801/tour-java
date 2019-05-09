@@ -1,6 +1,6 @@
 package cn.ymsys.common.request;
 
-import com.jyd.common.model.BuUTender;
+import cn.ymsys.common.model.BuUTender;
 
 public class TenderRequest extends BuUTender {
     private int page;

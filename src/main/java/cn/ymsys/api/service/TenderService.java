@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.jfinal.plugin.activerecord.Page;
-import com.jyd.common.model.BuUTender;
+import cn.ymsys.common.model.BuUTender;
 
 import cn.ymsys.common.request.TenderRequest;
 import cn.ymsys.common.util.Const;

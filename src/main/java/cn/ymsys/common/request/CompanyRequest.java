@@ -1,6 +1,6 @@
 package cn.ymsys.common.request;
 
-import com.jyd.common.model.BuUCompany;
+import cn.ymsys.common.model.BuUCompany;
 import com.terran4j.commons.api2doc.annotations.ApiComment;
 
 public class CompanyRequest extends BuUCompany {

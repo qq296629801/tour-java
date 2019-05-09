@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jyd.common.model.BuPhoto;
+import cn.ymsys.common.model.BuPhoto;
 
 import cn.ymsys.api.dao.PhotoDao;
 import cn.ymsys.common.request.BuPhotoRequest;

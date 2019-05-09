@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jyd.common.model.SysUser;
+import cn.ymsys.common.model.SysUser;
 
 import cn.ymsys.common.request.UserRequest;
 

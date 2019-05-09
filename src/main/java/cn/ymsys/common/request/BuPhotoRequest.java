@@ -1,6 +1,6 @@
 package cn.ymsys.common.request;
 
-import com.jyd.common.model.BuPhoto;
+import cn.ymsys.common.model.BuPhoto;
 
 public class BuPhotoRequest extends BuPhoto {
 	private int page;

@@ -1,6 +1,6 @@
 package cn.ymsys.common.request;
 
-import com.jyd.common.model.BuUProduct;
+import cn.ymsys.common.model.BuUProduct;
 
 public class ProductRequest extends BuUProduct {
 	private int page;

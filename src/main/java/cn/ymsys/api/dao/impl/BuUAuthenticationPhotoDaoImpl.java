@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.jyd.common.model.BuPhoto;
+import cn.ymsys.common.model.BuPhoto;
 
 import cn.ymsys.api.dao.PhotoDao;
 import cn.ymsys.common.enums.BaseEnum;

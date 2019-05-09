@@ -1,6 +1,6 @@
 package cn.ymsys.common.request;
 
-import com.jyd.common.model.BuUCompetitiveTender;
+import cn.ymsys.common.model.BuUCompetitiveTender;
 
 public class CompetiRequest extends BuUCompetitiveTender {
 	private String keyword;

@@ -1,5 +1,6 @@
-package com.jyd.common.model;
+package cn.ymsys.app;
 
+import cn.ymsys.common.model.*;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 
 /**
@@ -13,7 +14,7 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
  * }
  * </pre>
  */
-public class _MappingKit {
+public class MappingKit {
 	
 	public static void mapping(ActiveRecordPlugin arp) {
 		arp.addMapping("basics", "id", Basics.class);

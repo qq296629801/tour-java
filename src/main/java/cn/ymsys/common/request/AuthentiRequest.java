@@ -1,6 +1,6 @@
 package cn.ymsys.common.request;
 
-import com.jyd.common.model.BuUAuthentication;
+import cn.ymsys.common.model.BuUAuthentication;
 
 public class AuthentiRequest extends BuUAuthentication {
 
