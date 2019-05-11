@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import cn.ymsys.common.model.SysAd;
+import cn.ymsys.api.common.model.SysAd;
 
-import cn.ymsys.common.request.SysAdRequest;
+import cn.ymsys.api.common.request.SysAdRequest;
 
 @Service
 public class AdService {

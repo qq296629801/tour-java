@@ -1,6 +1,6 @@
 package cn.ymsys.app;
 
-import cn.ymsys.common.model.*;
+import cn.ymsys.api.common.model.*;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 
 /**

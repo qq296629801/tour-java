@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cn.ymsys.api.service.UserService;
-import cn.ymsys.common.request.UserRequest;
-import cn.ymsys.common.response.JsonResponse;
+import cn.ymsys.api.common.request.UserRequest;
+import cn.ymsys.api.common.response.JsonResponse;
 
 @RestController
 @RequestMapping("/user")

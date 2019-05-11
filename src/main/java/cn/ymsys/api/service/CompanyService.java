@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.jfinal.plugin.activerecord.Page;
-import cn.ymsys.common.model.BuUCompany;
+import cn.ymsys.api.common.model.BuUCompany;
 
-import cn.ymsys.common.request.CompanyRequest;
-import cn.ymsys.common.util.Const;
+import cn.ymsys.api.common.request.CompanyRequest;
+import cn.ymsys.api.common.util.Const;
 
 @Service
 public class CompanyService {

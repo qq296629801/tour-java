@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.baidu.aip.ocr.AipOcr;
 
 import cn.ymsys.api.dao.BaiduOrcDao;
-import cn.ymsys.common.util.Const;
+import cn.ymsys.api.common.util.Const;
 
 @Component("BusinesslicenseDaoImpl")
 public class BusinesslicenseDaoImpl implements BaiduOrcDao {

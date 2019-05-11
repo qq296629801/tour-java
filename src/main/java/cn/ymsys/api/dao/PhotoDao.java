@@ -2,9 +2,9 @@ package cn.ymsys.api.dao;
 
 import java.util.List;
 
-import cn.ymsys.common.model.BuPhoto;
+import cn.ymsys.api.common.model.BuPhoto;
 
-import cn.ymsys.common.enums.BaseEnum;
+import cn.ymsys.api.common.enums.BaseEnum;
 
 public abstract class PhotoDao {
 	public abstract List<BuPhoto> findPhotos(int id);

@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import cn.ymsys.common.model.BuPhoto;
+import cn.ymsys.api.common.model.BuPhoto;
 
 import cn.ymsys.api.dao.PhotoDao;
-import cn.ymsys.common.enums.BaseEnum;
+import cn.ymsys.api.common.enums.BaseEnum;
 
 @Component("BuUAuthenticationPhotoDaoImpl")
 public class BuUAuthenticationPhotoDaoImpl extends PhotoDao {

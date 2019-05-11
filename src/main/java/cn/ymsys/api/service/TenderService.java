@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.jfinal.plugin.activerecord.Page;
-import cn.ymsys.common.model.BuUTender;
+import cn.ymsys.api.common.model.BuUTender;
 
-import cn.ymsys.common.request.TenderRequest;
-import cn.ymsys.common.util.Const;
-import cn.ymsys.common.util.OwnException;
+import cn.ymsys.api.common.request.TenderRequest;
+import cn.ymsys.api.common.util.Const;
+import cn.ymsys.api.common.util.OwnException;
 
 @Service
 public class TenderService {

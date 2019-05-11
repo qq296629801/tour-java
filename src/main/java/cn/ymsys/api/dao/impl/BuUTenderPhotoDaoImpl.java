@@ -1,8 +1,8 @@
 package cn.ymsys.api.dao.impl;
 
 import cn.ymsys.api.dao.PhotoDao;
-import cn.ymsys.common.enums.BaseEnum;
-import cn.ymsys.common.model.BuPhoto;
+import cn.ymsys.api.common.enums.BaseEnum;
+import cn.ymsys.api.common.model.BuPhoto;
 
 import java.util.List;
 

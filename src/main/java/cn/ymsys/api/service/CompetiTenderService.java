@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.jfinal.plugin.activerecord.Page;
-import cn.ymsys.common.model.BuUCompetitiveTender;
+import cn.ymsys.api.common.model.BuUCompetitiveTender;
 
-import cn.ymsys.common.request.CompetiRequest;
-import cn.ymsys.common.util.Const;
+import cn.ymsys.api.common.request.CompetiRequest;
+import cn.ymsys.api.common.util.Const;
 
 @Service
 public class CompetiTenderService {

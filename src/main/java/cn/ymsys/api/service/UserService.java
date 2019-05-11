@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import cn.ymsys.common.model.SysUser;
+import cn.ymsys.api.common.model.SysUser;
 
-import cn.ymsys.common.request.UserRequest;
+import cn.ymsys.api.common.request.UserRequest;
 
 @Service
 public class UserService {

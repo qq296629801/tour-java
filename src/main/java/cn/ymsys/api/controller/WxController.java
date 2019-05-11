@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.ymsys.common.util.Const;
-import cn.ymsys.common.util.HttpClientUtils;
+import cn.ymsys.api.common.util.Const;
+import cn.ymsys.api.common.util.HttpClientUtils;
 
 @RestController
 @RequestMapping("/wx")

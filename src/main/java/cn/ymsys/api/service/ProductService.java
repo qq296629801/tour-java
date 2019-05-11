@@ -1,11 +1,11 @@
 package cn.ymsys.api.service;
 
-import cn.ymsys.common.request.ProductRequest;
-import cn.ymsys.common.util.Const;
-import cn.ymsys.common.util.OwnException;
+import cn.ymsys.api.common.request.ProductRequest;
+import cn.ymsys.api.common.util.Const;
+import cn.ymsys.api.common.util.OwnException;
 
 import com.jfinal.plugin.activerecord.Page;
-import cn.ymsys.common.model.BuUProduct;
+import cn.ymsys.api.common.model.BuUProduct;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -6,3 +6,21 @@ spring:
   thymeleaf:
     prefix: classpath:/templates
 
+lambda-portal:
+  redis-datasource:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        min-idle: 8
+        max-idle: 3000
+        max-active: 2000
+        max-total: 3000
+        max-wait: 10000
+    timeout: 0
+  shiro:
+    # 后端免认证接口 url
+    anonUrl: /*.html,/static/**,/login,/logout/**,/regist,/images/**
+    # token有效期，单位秒
+    jwtTimeOut: 3600
