@@ -1,17 +1,19 @@
 package cn.ymsys.common.util;
 
-import com.yatop.lambda.portal.common.authentication.JWTUtil;
-import com.yatop.lambda.portal.common.domain.PortalConstant;
-import com.yatop.lambda.portal.common.domain.QueryRequest;
-import com.yatop.lambda.portal.common.function.CacheSelector;
-import com.yatop.lambda.portal.common.service.CacheService;
-import com.yatop.lambda.portal.system.domain.User;
-import com.yatop.lambda.portal.system.service.UserService;
+import cn.ymsys.api.service.UserService;
+import cn.ymsys.common.authentication.JWTUtil;
+import cn.ymsys.common.domain.PortalConstant;
+import cn.ymsys.common.domain.QueryRequest;
+import cn.ymsys.common.function.CacheSelector;
+import cn.ymsys.common.model.SysUser;
+import cn.ymsys.common.service.CacheService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
@@ -29,14 +31,36 @@ public class PortalUtil {
      * @return T
      */
     @SuppressWarnings("unchecked")
-    public static <T> T selectCacheByTemplate(CacheSelector<?> cacheSelector, Supplier<?> databaseSelector) {
+
+    public static ThreadLocal<Map<String, Object>> currentTheadLocal = new InheritableThreadLocal();
+
+
+    public static <T> T selectCacheByTemplate(CacheSelector<?> cacheSelector, Supplier<?> databaseSelector, String key) {
         try {
+            // 先查线程变量
+            if (currentTheadLocal.get() != null) {
+                if (currentTheadLocal.get().get(key) != null) {
+                    return (T) currentTheadLocal.get().get(key);
+                }
+            } else {
+                Map<String, Object> map = new HashMap<>();
+                currentTheadLocal.set(map);
+            }
             // 先查 Redis缓存
-            return (T) cacheSelector.select();
-        } catch (Exception e) {
+            T result = (T) cacheSelector.select();
+            if (result != null) {
+                currentTheadLocal.get().put(key, result);
+                return result;
+            }
             // 数据库查询
+            result = (T) databaseSelector.get();
+            if (result != null) {
+                currentTheadLocal.get().put(key, result);
+            }
+            return (T) currentTheadLocal.get().get(key);
+        } catch (Exception e) {
             log.info("redis error：", e);
-            return (T) databaseSelector.get();
+            return null;
         }
     }
 
@@ -45,13 +69,12 @@ public class PortalUtil {
      *
      * @return 用户信息
      */
-    public static User getCurrentUser() {
+    public static SysUser getCurrentUser() {
         String token = (String) SecurityUtils.getSubject().getPrincipal();
         String username = JWTUtil.getUsername(token);
         UserService userService = SpringContextUtil.getBean(UserService.class);
         CacheService cacheService = SpringContextUtil.getBean(CacheService.class);
-
-        return selectCacheByTemplate(() -> cacheService.getUser(username), () -> userService.findByName(username));
+        return selectCacheByTemplate(() -> cacheService.getUser(username), () -> userService.findByName(username), username + "_user");
     }
 
     /**
@@ -60,7 +83,7 @@ public class PortalUtil {
      * @return 用户信息
      */
     public static String getCurrentUserName() {
-        return getCurrentUser().getUsername();
+        return getCurrentUser().getUserName();
     }
 
     /**

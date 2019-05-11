@@ -1,8 +1,9 @@
 package cn.ymsys.common.util;
 
-import com.yatop.lambda.portal.common.domain.Tree;
-import com.yatop.lambda.portal.common.domain.router.RouterMeta;
-import com.yatop.lambda.portal.common.domain.router.VueRouter;
+
+import cn.ymsys.common.domain.Tree;
+import cn.ymsys.common.domain.router.RouterMeta;
+import cn.ymsys.common.domain.router.VueRouter;
 
 import java.util.ArrayList;
 import java.util.List;

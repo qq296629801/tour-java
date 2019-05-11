@@ -1,4 +1,4 @@
-package cn.ymsys.api.service;
+package cn.ymsys.common.service;
 
 import org.springframework.stereotype.Service;
 

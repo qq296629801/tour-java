@@ -1,4 +1,4 @@
-package cn.ymsys.api.service;
+package cn.ymsys.common.service;
 
 import cn.ymsys.common.domain.ActiveUser;
 import cn.ymsys.common.domain.RedisInfo;
