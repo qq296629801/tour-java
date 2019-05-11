@@ -1,5 +1,6 @@
 package cn.ymsys.api.controller;
 
+import com.terran4j.commons.api2doc.annotations.Api2Doc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,39 +13,40 @@ import cn.ymsys.api.common.response.JsonResponse;
 
 @RestController
 @RequestMapping("/product")
+@Api2Doc(id = "product", name = "产品", order = 5)
 public class ProductController {
-	@Autowired
-	private ProductService productService;
-	@Autowired
-	private PhotoService photoService;
+    @Autowired
+    private ProductService productService;
+    @Autowired
+    private PhotoService photoService;
 
-	@RequestMapping("/list")
-	public JsonResponse list(@RequestBody ProductRequest vo) {
-		return JsonResponse.build(productService.findProducts(vo));
-	}
+    @RequestMapping("/list")
+    public JsonResponse list(@RequestBody ProductRequest vo) {
+        return JsonResponse.build(productService.findProducts(vo));
+    }
 
-	@RequestMapping("/single")
-	public JsonResponse single(@RequestBody ProductRequest vo) {
-		return JsonResponse.build(productService.findProduct(vo));
-	}
+    @RequestMapping("/single")
+    public JsonResponse single(@RequestBody ProductRequest vo) {
+        return JsonResponse.build(productService.findProduct(vo));
+    }
 
-	@RequestMapping("/photos")
-	public JsonResponse photos(@RequestBody ProductRequest vo) {
-		return JsonResponse.build(photoService.get("ProductPhotoDaoImpl", vo.getId()));
-	}
+    @RequestMapping("/photos")
+    public JsonResponse photos(@RequestBody ProductRequest vo) {
+        return JsonResponse.build(photoService.get("ProductPhotoDaoImpl", vo.getId()));
+    }
 
-	@RequestMapping("/save")
-	public JsonResponse save(@RequestBody ProductRequest vo) {
-		return JsonResponse.build(productService.save(vo));
-	}
+    @RequestMapping("/save")
+    public JsonResponse save(@RequestBody ProductRequest vo) {
+        return JsonResponse.build(productService.save(vo));
+    }
 
-	@RequestMapping("/update")
-	public JsonResponse update(@RequestBody ProductRequest vo) {
-		return JsonResponse.build(productService.update(vo));
-	}
+    @RequestMapping("/update")
+    public JsonResponse update(@RequestBody ProductRequest vo) {
+        return JsonResponse.build(productService.update(vo));
+    }
 
-	@RequestMapping("/delete")
-	public JsonResponse delete(@RequestBody ProductRequest vo) {
-		return JsonResponse.build(productService.delete(vo));
-	}
+    @RequestMapping("/delete")
+    public JsonResponse delete(@RequestBody ProductRequest vo) {
+        return JsonResponse.build(productService.delete(vo));
+    }
 }

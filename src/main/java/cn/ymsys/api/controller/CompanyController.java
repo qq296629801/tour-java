@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/company")
-@Api2Doc(id = "company", name = "公司", order = 2)
+@Api2Doc(id = "company", name = "公司", order = 7)
 public class CompanyController {
 
     @Autowired

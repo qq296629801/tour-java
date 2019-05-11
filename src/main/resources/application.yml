@@ -21,6 +21,6 @@ lambda-portal:
     timeout: 0
   shiro:
     # 后端免认证接口 url
-    anonUrl: /*.html,/static/**,/login,/logout/**,/regist,/images/**
+    anonUrl: /*.html,/static/**,/login,/logout/**,/regist,/images/**,/api2doc/**,/website/**
     # token有效期，单位秒
     jwtTimeOut: 3600
