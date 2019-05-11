@@ -1,10 +1,10 @@
 package cn.ymsys.common.authentication;
 
-import cn.ymsys.api.service.RedisService;
 import cn.ymsys.common.exception.LimitAccessException;
 import cn.ymsys.common.properties.LambdaPortalProperties;
 import cn.ymsys.common.response.PortalErrorCode;
 import cn.ymsys.common.response.PortalJsonResponse;
+import cn.ymsys.common.service.RedisService;
 import cn.ymsys.common.util.IPUtil;
 import cn.ymsys.common.util.PortalUtil;
 import cn.ymsys.common.util.SpringContextUtil;

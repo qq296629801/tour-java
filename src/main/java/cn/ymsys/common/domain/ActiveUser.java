@@ -1,7 +1,7 @@
 package cn.ymsys.common.domain;
 
+import cn.ymsys.common.util.DateUtil;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.yatop.lambda.portal.common.utils.DateUtil;
 import lombok.Data;
 import org.apache.commons.lang3.RandomStringUtils;
 

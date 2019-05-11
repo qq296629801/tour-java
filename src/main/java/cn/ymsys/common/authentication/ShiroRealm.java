@@ -1,8 +1,8 @@
 package cn.ymsys.common.authentication;
 
-import cn.ymsys.api.service.RedisService;
 import cn.ymsys.common.domain.ActiveUser;
 import cn.ymsys.common.domain.PortalConstant;
+import cn.ymsys.common.service.RedisService;
 import cn.ymsys.common.util.HttpContextUtil;
 import cn.ymsys.common.util.IPUtil;
 import cn.ymsys.common.util.PortalUtil;
