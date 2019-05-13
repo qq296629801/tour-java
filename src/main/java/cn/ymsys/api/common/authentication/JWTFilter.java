@@ -92,6 +92,7 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
     }
 
     private void limitAction(ServletRequest request, String USERNAME) throws LimitAccessException {
+        PortalUtil.currentTheadLocal.remove();
         HttpServletRequest req = (HttpServletRequest) request;
         String URL = req.getRequestURI();
         String METHOD = req.getMethod();
