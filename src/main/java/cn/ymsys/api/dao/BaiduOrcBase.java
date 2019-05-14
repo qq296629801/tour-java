@@ -6,6 +6,6 @@ package cn.ymsys.api.dao;
  * @author mjy
  *
  */
-public interface BaiduOrcDao {
+public interface BaiduOrcBase {
 	boolean send();
 }

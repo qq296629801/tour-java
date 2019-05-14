@@ -6,7 +6,7 @@ import cn.ymsys.api.common.model.BuPhoto;
 
 import cn.ymsys.api.common.enums.BaseEnum;
 
-public abstract class PhotoDao {
+public abstract class PhotoBase {
 	public abstract List<BuPhoto> findPhotos(int id);
 
 	private long value;
@@ -21,7 +21,7 @@ public abstract class PhotoDao {
 
 	public BuPhoto dao = new BuPhoto();
 
-	public PhotoDao(BaseEnum base) {
+	public PhotoBase(BaseEnum base) {
 		this.value = base.getValue();
 	}
 }

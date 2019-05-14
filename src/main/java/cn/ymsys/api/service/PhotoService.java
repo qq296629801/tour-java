@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import cn.ymsys.api.common.model.BuPhoto;
 
-import cn.ymsys.api.dao.PhotoDao;
+import cn.ymsys.api.dao.PhotoBase;
 import cn.ymsys.api.common.request.BuPhotoRequest;
 
 @Service
@@ -18,7 +18,7 @@ public class PhotoService {
 	private BuPhoto dao = new BuPhoto();
 
 	@Autowired
-	private final Map<String, PhotoDao> photoMap = new ConcurrentHashMap<>();
+	private final Map<String, PhotoBase> photoMap = new ConcurrentHashMap<>();
 
 	public List<BuPhoto> find() {
 		return dao.find("select * from bu_photo");

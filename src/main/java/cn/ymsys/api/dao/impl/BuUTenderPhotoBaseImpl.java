@@ -1,6 +1,6 @@
 package cn.ymsys.api.dao.impl;
 
-import cn.ymsys.api.dao.PhotoDao;
+import cn.ymsys.api.dao.PhotoBase;
 import cn.ymsys.api.common.enums.BaseEnum;
 import cn.ymsys.api.common.model.BuPhoto;
 
@@ -9,13 +9,13 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 @Component("BuUTenderPhotoDaoImpl")
-public class BuUTenderPhotoDaoImpl extends PhotoDao {
+public class BuUTenderPhotoBaseImpl extends PhotoBase {
 
-	public BuUTenderPhotoDaoImpl(BaseEnum base) {
+	public BuUTenderPhotoBaseImpl(BaseEnum base) {
 		super(base);
 	}
 
-	public BuUTenderPhotoDaoImpl() {
+	public BuUTenderPhotoBaseImpl() {
 		this(BaseEnum.TENDER_IMG);
 	}
 

@@ -6,18 +6,17 @@ import org.springframework.stereotype.Component;
 
 import cn.ymsys.api.common.model.BuPhoto;
 
-import cn.ymsys.api.dao.PhotoDao;
+import cn.ymsys.api.dao.PhotoBase;
 import cn.ymsys.api.common.enums.BaseEnum;
+@Component("CompanyPhotoDaoImpl")
+public class CompanyPhotoBaseImpl extends PhotoBase {
 
-@Component("ProductPhotoDaoImpl")
-public class ProductPhotoDaoImpl extends PhotoDao {
-
-	public ProductPhotoDaoImpl(BaseEnum base) {
+	public CompanyPhotoBaseImpl(BaseEnum base) {
 		super(base);
 	}
 
-	public ProductPhotoDaoImpl() {
-		this(BaseEnum.PRODUCT_IMG);
+	public CompanyPhotoBaseImpl() {
+		this(BaseEnum.COMPANY_IMG);
 	}
 
 	@Override

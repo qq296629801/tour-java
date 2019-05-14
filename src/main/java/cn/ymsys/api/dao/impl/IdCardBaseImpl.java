@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 
 import com.baidu.aip.util.Base64Util;
 
-import cn.ymsys.api.dao.BaiduOrcDao;
+import cn.ymsys.api.dao.BaiduOrcBase;
 import cn.ymsys.api.common.util.AuthService;
 import cn.ymsys.api.common.util.FileUtil;
 import cn.ymsys.api.common.util.HttpUtil;
 
 @Component("IdCardDaoImpl")
-public class IdCardDaoImpl implements BaiduOrcDao {
+public class IdCardBaseImpl implements BaiduOrcBase {
 
 	@Override
 	public boolean send() {

@@ -6,17 +6,17 @@ import org.springframework.stereotype.Component;
 
 import cn.ymsys.api.common.model.BuPhoto;
 
-import cn.ymsys.api.dao.PhotoDao;
+import cn.ymsys.api.dao.PhotoBase;
 import cn.ymsys.api.common.enums.BaseEnum;
 
 @Component("BuUAuthenticationPhotoDaoImpl")
-public class BuUAuthenticationPhotoDaoImpl extends PhotoDao {
+public class BuUAuthenticationPhotoBaseImpl extends PhotoBase {
 
-	public BuUAuthenticationPhotoDaoImpl(BaseEnum base) {
+	public BuUAuthenticationPhotoBaseImpl(BaseEnum base) {
 		super(base);
 	}
 
-	public BuUAuthenticationPhotoDaoImpl() {
+	public BuUAuthenticationPhotoBaseImpl() {
 		this(BaseEnum.AUTHENTICATION_IMG);
 	}
 
