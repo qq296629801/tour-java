@@ -18,7 +18,7 @@ import cn.ymsys.api.common.util.HttpClientUtils;
 
 @RestController
 @RequestMapping("/wx")
-@Api2Doc(id = "wx", name = "登录", order = 1)
+@Api2Doc(id = "wx", name = "微信认证", order = 1)
 public class WxController {
     @Autowired
     private HttpServletRequest request;
@@ -28,9 +28,9 @@ public class WxController {
     private final String url = "https://api.weixin.qq.com/sns/jscode2session";
 
     @Api2Doc(order = 1)
-    @ApiComment("获取用户信息")
-    @RequestMapping("/toLogin")
-    public Map<String, Object> doLogin(@RequestParam(required = false) String code) {
+    @ApiComment("登录")
+    @RequestMapping("/login")
+    public Map<String, Object> login(@ApiComment("代码") @RequestParam(required = false) String code) {
 
         HttpClientUtils httpClientUtils = new HttpClientUtils();
         Map<String, String> parm = new HashMap<>();
