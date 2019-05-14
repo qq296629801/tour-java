@@ -23,29 +23,33 @@ public class AuthentiController {
     private AuthentiService authentiService;
 
     @Api2Doc(order = 1)
-    @ApiComment("认证列表")
+    @ApiComment("列表")
     @RequestMapping("/list")
     public JsonResponse list(@RequestBody AuthentiRequest vo) {
         return JsonResponse.build(authentiService.findByPage(vo));
     }
 
+    @ApiComment("保存")
     @RequestMapping("/save")
     public JsonResponse save(@RequestBody AuthentiRequest vo) {
         return JsonResponse.build(authentiService.save(vo));
     }
 
+    @ApiComment("更新")
     @RequestMapping("/update")
     public JsonResponse update(@RequestBody AuthentiRequest vo) {
         return JsonResponse.build(authentiService.update(vo));
     }
 
+    @ApiComment("刪除")
     @RequestMapping("/delete")
     public JsonResponse delete(@RequestBody AuthentiRequest vo) {
         return JsonResponse.build(authentiService.delete(vo));
     }
 
-    @RequestMapping("/userAuthentis")
-    public JsonResponse userAuthentis(@RequestBody AuthentiRequest vo) {
+    @ApiComment("用户认证列表")
+    @RequestMapping("/findUserAuth")
+    public JsonResponse findUserAuth(@RequestBody AuthentiRequest vo) {
         return JsonResponse.build(authentiService.find(vo));
     }
 
