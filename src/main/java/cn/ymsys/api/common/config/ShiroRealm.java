@@ -23,11 +23,6 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * 自定义实现 ShiroRealm，包含认证和授权两大模块
- *
- * @author MrBird
- */
 
 @Service
 public class ShiroRealm extends AuthorizingRealm {
@@ -35,13 +30,8 @@ public class ShiroRealm extends AuthorizingRealm {
     @Autowired
     private RedisService redisService;
 
-//    @Autowired
-//    private UserManager userManager;
-
-
     @Autowired
     private ObjectMapper mapper;
-
 
     @Override
     public boolean supports(AuthenticationToken token) {
@@ -60,10 +50,8 @@ public class ShiroRealm extends AuthorizingRealm {
         String username = JWTUtil.getUsername(token.toString());
 
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-//        // 获取用户角色集
 //        Set<String> roleSet = userManager.getUserRoles(username);
 //        simpleAuthorizationInfo.setRoles(roleSet);
-//        // 获取用户权限集
 //        Set<String> permissionSet = userManager.getUserPermissions(username);
 //        simpleAuthorizationInfo.setStringPermissions(permissionSet);
         return simpleAuthorizationInfo;
@@ -117,7 +105,6 @@ public class ShiroRealm extends AuthorizingRealm {
         if (StringUtils.isBlank(username))
             throw new AuthenticationException("Token校验不通过，请重新登陆");
 
-        // 通过用户名查询用户信息
 //        User user = userManager.getUser(username);
 
 //        if (user == null)

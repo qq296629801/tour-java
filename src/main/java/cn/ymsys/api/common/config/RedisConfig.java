@@ -79,24 +79,18 @@ public class RedisConfig extends CachingConfigurerSupport /*implements Transacti
     }
 
     @Bean(name = "redisTemplate")
-    @SuppressWarnings({"unchecked", "rawtypes"})
     @ConditionalOnMissingBean(name = "redisTemplate")
     public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
         RedisTemplate<Object, Object> template = new RedisTemplate<>();
-        //使用 fastjson 序列化
         FastJsonRedisSerializer fastJsonRedisSerializer = new FastJsonRedisSerializer(Object.class);
-        // value 值的序列化采用 fastJsonRedisSerializer
         template.setValueSerializer(fastJsonRedisSerializer);
         template.setHashValueSerializer(fastJsonRedisSerializer);
-        // key 的序列化采用 StringRedisSerializer
         template.setKeySerializer(new StringRedisSerializer());
         template.setHashKeySerializer(new StringRedisSerializer());
-
         template.setConnectionFactory(redisConnectionFactory);
         return template;
     }
 
-    //缓存管理器
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
         RedisCacheManager.RedisCacheManagerBuilder builder = RedisCacheManager.RedisCacheManagerBuilder
@@ -132,14 +126,6 @@ public class RedisConfig extends CachingConfigurerSupport /*implements Transacti
         return template;
     }
 
-    /*@Autowired
-    @Qualifier("portalTransactionManager")
-    private PlatformTransactionManager redisTransactionManager;
-
-    @Override
-    public PlatformTransactionManager annotationDrivenTransactionManager() {
-        return redisTransactionManager;
-    }*/
 
     public static class FastJsonRedisSerializer<T> implements RedisSerializer<T> {
         private static final Charset DEFAULT_CHARSET = Charset.forName("UTF-8");
