@@ -2,10 +2,9 @@ package cn.ymsys.api.dao;
 
 /**
  * 百度文字识别（OCR）服务
- * 
- * @author mjy
  *
+ * @author mjy
  */
-public interface BaiduOrcBase {
-	boolean send();
+public interface BaiduOCR {
+    boolean push();
 }

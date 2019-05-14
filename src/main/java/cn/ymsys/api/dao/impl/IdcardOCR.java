@@ -6,16 +6,16 @@ import org.springframework.stereotype.Component;
 
 import com.baidu.aip.util.Base64Util;
 
-import cn.ymsys.api.dao.BaiduOrcBase;
+import cn.ymsys.api.dao.BaiduOCR;
 import cn.ymsys.api.common.util.AuthService;
 import cn.ymsys.api.common.util.FileUtil;
 import cn.ymsys.api.common.util.HttpUtil;
 
-@Component("IdCardDaoImpl")
-public class IdCardBaseImpl implements BaiduOrcBase {
+@Component("IdcardOCR")
+public class IdcardOCR implements BaiduOCR {
 
 	@Override
-	public boolean send() {
+	public boolean push() {
 		System.err.println("id card");
 		// 身份证识别url
 		String idcardIdentificate = "https://aip.baidubce.com/rest/2.0/ocr/v1/idcard";
