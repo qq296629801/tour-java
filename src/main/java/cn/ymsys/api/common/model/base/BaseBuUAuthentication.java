@@ -63,4 +63,58 @@ public abstract class BaseBuUAuthentication<M extends BaseBuUAuthentication<M>> 
 		return getInt("status");
 	}
 
+	public M setCompanyName(java.lang.String companyName) {
+		set("company_name", companyName);
+		return (M)this;
+	}
+	
+	public java.lang.String getCompanyName() {
+		return getStr("company_name");
+	}
+
+	public M setCompanyOrg(java.lang.String companyOrg) {
+		set("company_org", companyOrg);
+		return (M)this;
+	}
+	
+	public java.lang.String getCompanyOrg() {
+		return getStr("company_org");
+	}
+
+	public M setRealName(java.lang.String realName) {
+		set("real_name", realName);
+		return (M)this;
+	}
+	
+	public java.lang.String getRealName() {
+		return getStr("real_name");
+	}
+
+	public M setAddress(java.lang.String address) {
+		set("address", address);
+		return (M)this;
+	}
+	
+	public java.lang.String getAddress() {
+		return getStr("address");
+	}
+
+	public M setOrgNumber(java.lang.String orgNumber) {
+		set("org_number", orgNumber);
+		return (M)this;
+	}
+	
+	public java.lang.String getOrgNumber() {
+		return getStr("org_number");
+	}
+
+	public M setAuthTime(java.util.Date authTime) {
+		set("auth_time", authTime);
+		return (M)this;
+	}
+	
+	public java.util.Date getAuthTime() {
+		return get("auth_time");
+	}
+
 }

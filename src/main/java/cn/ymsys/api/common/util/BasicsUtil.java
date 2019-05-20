@@ -1,9 +1,9 @@
 package cn.ymsys.api.common.util;
 
 import cn.ymsys.api.common.model.Basics;
+import cn.ymsys.api.common.model._MappingKit;
 import cn.ymsys.api.service.BasicsService;
 import cn.ymsys.app.JFinalDemoGenerator;
-import cn.ymsys.app.MappingKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class BasicsUtil {
     @PostConstruct
     private void loadBasics() {
         ActiveRecordPlugin arp = new ActiveRecordPlugin(JFinalDemoGenerator.getDataSource());
-        MappingKit.mapping(arp);
+        _MappingKit.mapping(arp);
         arp.start();
 
         ALL_BASICS_PARAMETERS.clear();
