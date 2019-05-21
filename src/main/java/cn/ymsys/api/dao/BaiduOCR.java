@@ -6,5 +6,5 @@ package cn.ymsys.api.dao;
  * @author mjy
  */
 public interface BaiduOCR {
-    boolean push();
+    boolean post();
 }

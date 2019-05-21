@@ -25,6 +25,8 @@ public class _MappingKit {
 		arp.addMapping("bu_u_product", "id", BuUProduct.class);
 		arp.addMapping("bu_u_tender", "id", BuUTender.class);
 		arp.addMapping("sys_ad", "id", SysAd.class);
+		arp.addMapping("sys_execution_job", "id", SysExecutionJob.class);
+		arp.addMapping("sys_execution_queue", "id", SysExecutionQueue.class);
 		arp.addMapping("sys_user", "id", SysUser.class);
 	}
 }

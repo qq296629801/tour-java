@@ -14,7 +14,7 @@ import cn.ymsys.api.common.util.Const;
 public class BusinessLicenseOCR implements BaiduOCR {
 
     @Override
-    public boolean push() {
+    public boolean post() {
         AipOcr client = new AipOcr(Const.APP_ID, Const.API_KEY, Const.SECRET_KEY);
 
         System.err.println("business license");
