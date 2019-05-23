@@ -37,11 +37,11 @@ public class BasicsUtil {
         }
     }
 
-    public static Integer find(String key) {
+    public static Basics find(String key) {
         if (StringUtils.isNotBlank(key)) {
             Basics param = ALL_BASICS_PARAMETERS.get(key);
             if (DataUtil.isNotNull(param))
-                return param.getValuee();
+                return param;
         }
         return null;
     }
