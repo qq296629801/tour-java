@@ -1,4 +1,4 @@
-package cn.ymsys.api.controller;
+package cn.ymsys.api.controller.supplier;
 
 import cn.ymsys.api.common.request.CompanyRequest;
 import cn.ymsys.api.common.response.JsonResponse;
