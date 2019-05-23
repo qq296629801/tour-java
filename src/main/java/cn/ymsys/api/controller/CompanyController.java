@@ -39,7 +39,7 @@ public class CompanyController {
     @Api2Doc(order = 3)
     @ApiComment("公司详情页面轮播图")
     public JsonResponse photos(@RequestBody CompanyRequest vo) {
-        return JsonResponse.build(photoService.get("CompanyPhotoDaoImpl", vo.getId()));
+        return JsonResponse.build(photoService.findPhotos(vo.getId(), "公司图片"));
     }
 
     @RequestMapping("/save")

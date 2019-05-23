@@ -36,7 +36,7 @@ public class ProductController {
     @ApiComment("轮播")
     @RequestMapping("/photos")
     public JsonResponse photos(@RequestBody ProductRequest vo) {
-        return JsonResponse.build(photoService.get("ProductPhotoDaoImpl", vo.getId()));
+        return JsonResponse.build(photoService.findPhotos(vo.getId(), "产品图片"));
     }
 
     @ApiComment("保存")

@@ -37,7 +37,7 @@ public class TenderController {
     @ApiComment("轮播")
     @RequestMapping("/photos")
     public JsonResponse photos(@RequestBody TenderRequest vo) {
-        return JsonResponse.build(photoService.get("BuUTenderPhotoDaoImpl", vo.getId()));
+        return JsonResponse.build(photoService.findPhotos(vo.getId(), "标的图片"));
     }
 
     @ApiComment("保存")
