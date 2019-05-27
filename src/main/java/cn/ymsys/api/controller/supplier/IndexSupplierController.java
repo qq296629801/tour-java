@@ -2,9 +2,12 @@ package cn.ymsys.api.controller.supplier;
 
 import cn.ymsys.api.common.request.CompanyRequest;
 import cn.ymsys.api.common.response.JsonResponse;
+import cn.ymsys.api.model.Basic;
+import cn.ymsys.api.repository.BasicRepository;
 import com.terran4j.commons.api2doc.annotations.Api2Doc;
 import com.terran4j.commons.api2doc.annotations.ApiComment;
 import com.terran4j.commons.api2doc.annotations.ApiError;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,12 +20,21 @@ import org.springframework.web.bind.annotation.RestController;
 @ApiComment(seeClass = CompanyRequest.class)
 public class IndexSupplierController {
 
+    @Autowired
+    private BasicRepository basicRepository;
+
     @Api2Doc(order = 1)
     @ApiComment("首页")
     @ApiError(value = "abc", comment = "不知道打什么!")
     @GetMapping("/")
     public JsonResponse index() {
-        return JsonResponse.build("");
+        Basic b = new Basic();
+        b.setClounmName("dasdsa");
+        b.setClunmTable("dasdasdasd");
+        b.setKey("a");
+        b.setValue("b");
+        basicRepository.add(b);
+        return JsonResponse.build(basicRepository.findALl());
     }
 
     @Api2Doc(order = 2)

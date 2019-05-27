@@ -1,4 +1,4 @@
-package cn.ymsys.api.dao.impl;
+package cn.ymsys.api.common.baidu;
 
 import java.util.HashMap;
 
@@ -7,11 +7,10 @@ import org.springframework.stereotype.Component;
 
 import com.baidu.aip.ocr.AipOcr;
 
-import cn.ymsys.api.dao.BaiduOCR;
 import cn.ymsys.api.common.util.Const;
 
 @Component("BusinessLicenseOCR")
-public class BusinessLicenseOCR implements BaiduOCR {
+public class BaiduBusinessLicenseOCR implements BaiduOCR {
 
     @Override
     public boolean post() {

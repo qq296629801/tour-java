@@ -1,4 +1,4 @@
-package cn.ymsys.api.dao.impl;
+package cn.ymsys.api.common.baidu;
 
 import java.net.URLEncoder;
 
@@ -6,13 +6,12 @@ import org.springframework.stereotype.Component;
 
 import com.baidu.aip.util.Base64Util;
 
-import cn.ymsys.api.dao.BaiduOCR;
 import cn.ymsys.api.common.util.AuthService;
 import cn.ymsys.api.common.util.FileUtil;
 import cn.ymsys.api.common.util.HttpUtil;
 
 @Component("IdcardOCR")
-public class IdcardOCR implements BaiduOCR {
+public class BaiduIdcardOCR implements BaiduOCR {
 
     @Override
     public boolean post() {

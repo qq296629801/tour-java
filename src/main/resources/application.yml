@@ -17,8 +17,13 @@ spring:
           auto: update
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
   show-sql: true
-
-
+  # mongodb
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: play
+# redis
 lambda-portal:
   redis-datasource:
     host: 127.0.0.1
@@ -34,6 +39,7 @@ lambda-portal:
     timeout: 0
   shiro:
     # 后端免认证接口 url
-    anonUrl: /*.html,/static/**,/login,/logout/**,/regist,/images/**,/api2doc/**,/website/**
+    #anonUrl: /*.html,/static/**,/login,/logout/**,/regist,/images/**,/api2doc/**,/website/**
+    anonUrl: /**
     # token有效期，单位秒
     jwtTimeOut: 3600

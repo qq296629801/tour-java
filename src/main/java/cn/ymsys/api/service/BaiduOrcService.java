@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cn.ymsys.api.dao.BaiduOCR;
+import cn.ymsys.api.common.baidu.BaiduOCR;
 
 /**
  * @author mjy
