@@ -8,10 +8,14 @@ import com.terran4j.commons.api2doc.annotations.ApiError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author mjy
+ * @date 2019/05/23
+ */
 @RestController
-@Api2Doc(id = "home", name = "首页", order = 11)
+@Api2Doc(id = "supplierHome", name = "首页", order = 11)
 @ApiComment(seeClass = CompanyRequest.class)
-public class IndexController {
+public class IndexSupplierController {
 
     @Api2Doc(order = 1)
     @ApiComment("首页")

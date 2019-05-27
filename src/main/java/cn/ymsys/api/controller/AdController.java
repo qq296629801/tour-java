@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author mjy
+ * @date 2019/05/23
+ */
 @RestController
 @RequestMapping("/ad")
 @Api2Doc(id = "ad", name = "广告", order = 10)

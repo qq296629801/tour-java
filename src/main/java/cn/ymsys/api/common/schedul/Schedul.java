@@ -31,7 +31,7 @@ public class Schedul {
     @Scheduled(fixedDelay = 1000, initialDelay = 0)
     public void execute() {
         try {
-            System.err.println("------------schedul begin----------------------");
+            //System.err.println("------------schedul begin----------------------");
             List<SysExecutionQueue> queueList = queueService.getQueues();
             for (SysExecutionQueue queue : queueList) {
                 baiduOrcService.handleEvent("BusinessLicenseOCR");

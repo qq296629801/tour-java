@@ -31,6 +31,10 @@
 		</repository>
 	</repositories>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
 		<!-- 引入elastic-job核心模块 -->
 		<dependency>
 			<groupId>com.dangdang</groupId>

@@ -10,10 +10,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 @EnableAsync
 @EnableApi2Doc
-public class TourApplication {
+public class BlogApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TourApplication.class, args);
+        SpringApplication.run(BlogApplication.class, args);
     }
 
 }
