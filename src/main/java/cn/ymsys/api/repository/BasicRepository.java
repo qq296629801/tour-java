@@ -1,11 +1,13 @@
 package cn.ymsys.api.repository;
 
 import cn.ymsys.api.model.Basic;
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
+import org.springframework.data.domain.Page;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-import java.util.List;
-
-public interface BasicRepository {
-    List<Basic> findALl();
+public interface BasicRepository extends PagingAndSortingRepository<Basic, String> {
+    //分页查询
+    Page<Basic> findAll(SpringDataWebProperties.Pageable pageable);
 
     void add(Basic basic);
 }

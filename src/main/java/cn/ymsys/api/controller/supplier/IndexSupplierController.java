@@ -34,7 +34,7 @@ public class IndexSupplierController {
         b.setKey("a");
         b.setValue("b");
         basicRepository.add(b);
-        return JsonResponse.build(basicRepository.findALl());
+        return JsonResponse.build(basicRepository.findAll());
     }
 
     @Api2Doc(order = 2)
