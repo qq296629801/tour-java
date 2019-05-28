@@ -1,6 +1,5 @@
 package cn.ymsys.api.controller.supplier;
 
-import cn.ymsys.api.common.request.CompanyRequest;
 import cn.ymsys.api.common.response.JsonResponse;
 import cn.ymsys.api.model.Basic;
 import cn.ymsys.api.repository.BasicRepository;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Api2Doc(id = "supplierHome", name = "首页", order = 11)
-@ApiComment(seeClass = CompanyRequest.class)
 public class IndexSupplierController {
 
     @Autowired

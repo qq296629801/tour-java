@@ -14,9 +14,9 @@ public class MongoAutoidUtil {
     @Autowired
     MongoTemplate mongoTemplate;
 
-    public int getNextSequence(String collectionName) {
+    public int getNextSequence(Class clazz) {
         MongoSequence seq = mongoTemplate.findAndModify(
-                query(where("_id").is(collectionName)),
+                query(where("_id").is(clazz.getSimpleName())),
                 new Update().inc("seq", 1),
                 options().upsert(true).returnNew(true),
                 MongoSequence.class);

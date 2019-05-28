@@ -1,8 +1,8 @@
 package cn.ymsys.api.service.impl;
 
-import cn.ymsys.api.service.UserService;
 import cn.ymsys.api.common.domain.PortalConstant;
-import cn.ymsys.api.common.model.SysUser;
+import cn.ymsys.api.model.User;
+import cn.ymsys.api.repository.UserRepository;
 import cn.ymsys.api.service.CacheService;
 import cn.ymsys.api.service.RedisService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,7 +18,7 @@ public class CacheServiceImpl implements CacheService {
     private RedisService redisService;
 
     @Autowired
-    private UserService userService;
+    private UserRepository userRepository;
 
     @Autowired
     private ObjectMapper mapper;
@@ -29,12 +29,12 @@ public class CacheServiceImpl implements CacheService {
     }
 
     @Override
-    public SysUser getUser(String username) throws Exception {
+    public User getUser(String username) throws Exception {
         String userString = this.redisService.get(PortalConstant.USER_CACHE_PREFIX + username.toLowerCase());
         if (StringUtils.isBlank(userString))
             throw new Exception();
         else
-            return this.mapper.readValue(userString, SysUser.class);
+            return this.mapper.readValue(userString, User.class);
     }
 
 
@@ -48,7 +48,7 @@ public class CacheServiceImpl implements CacheService {
     }
 
     @Override
-    public void saveUser(SysUser user) throws Exception {
+    public void saveUser(User user) throws Exception {
         String username = user.getUserName().toLowerCase();
         this.deleteUser(username);
         redisService.set(PortalConstant.USER_CACHE_PREFIX + username, mapper.writeValueAsString(user));
@@ -56,7 +56,7 @@ public class CacheServiceImpl implements CacheService {
 
     @Override
     public void saveUser(String username) throws Exception {
-        SysUser user = userService.findByName(username);
+        User user = userRepository.findByName(username);
         this.deleteUser(username);
         redisService.set(PortalConstant.USER_CACHE_PREFIX + username.toLowerCase(), mapper.writeValueAsString(user));
     }

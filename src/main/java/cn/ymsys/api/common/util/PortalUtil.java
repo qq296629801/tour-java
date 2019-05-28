@@ -1,11 +1,11 @@
 package cn.ymsys.api.common.util;
 
-import cn.ymsys.api.service.UserService;
 import cn.ymsys.api.common.authentication.JWTUtil;
 import cn.ymsys.api.common.domain.PortalConstant;
 import cn.ymsys.api.common.domain.QueryRequest;
 import cn.ymsys.api.common.function.CacheSelector;
-import cn.ymsys.api.common.model.SysUser;
+import cn.ymsys.api.model.User;
+import cn.ymsys.api.repository.UserRepository;
 import cn.ymsys.api.service.CacheService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -69,12 +69,12 @@ public class PortalUtil {
      *
      * @return 用户信息
      */
-    public static SysUser getCurrentUser() {
+    public static User getCurrentUser() {
         String token = (String) SecurityUtils.getSubject().getPrincipal();
         String username = JWTUtil.getUsername(token);
-        UserService userService = SpringContextUtil.getBean(UserService.class);
+        UserRepository userRepository = SpringContextUtil.getBean(UserRepository.class);
         CacheService cacheService = SpringContextUtil.getBean(CacheService.class);
-        return selectCacheByTemplate(() -> cacheService.getUser(username), () -> userService.findByName(username), username + "_user");
+        return selectCacheByTemplate(() -> cacheService.getUser(username), () -> userRepository.findByName(username), username + "_user");
     }
 
     /**

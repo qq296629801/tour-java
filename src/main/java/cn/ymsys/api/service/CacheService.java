@@ -1,6 +1,6 @@
 package cn.ymsys.api.service;
 
-import cn.ymsys.api.common.model.SysUser;
+import cn.ymsys.api.model.User;
 import org.apache.catalina.startup.UserConfig;
 
 public interface CacheService {
@@ -16,7 +16,7 @@ public interface CacheService {
      * @param username 用户名
      * @return User
      */
-    SysUser getUser(String username) throws Exception;
+    User getUser(String username) throws Exception;
 
 
     /**
@@ -33,7 +33,7 @@ public interface CacheService {
      *
      * @param user 用户信息
      */
-    void saveUser(SysUser user) throws Exception;
+    void saveUser(User user) throws Exception;
 
     /**
      * 缓存用户信息

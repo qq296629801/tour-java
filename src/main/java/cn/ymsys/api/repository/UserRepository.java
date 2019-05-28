@@ -1,27 +1,19 @@
 package cn.ymsys.api.repository;
 
 import cn.ymsys.api.common.util.MongoAutoidUtil;
-import cn.ymsys.api.model.Basic;
+import cn.ymsys.api.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
-public class BasicRepository {
+public class UserRepository {
     @Autowired
     private MongoTemplate mongoTemplate;
     @Autowired
     private MongoAutoidUtil mongoAutoidUtil;
 
-    public void add(Basic basic) {
-        basic.setId(mongoAutoidUtil.getNextSequence(Basic.class));
-        mongoTemplate.save(basic);
+    public User findByName(String userName) {
+        return null;
     }
-
-    public List<Basic> findAll() {
-        return mongoTemplate.findAll(Basic.class);
-    }
-
 }

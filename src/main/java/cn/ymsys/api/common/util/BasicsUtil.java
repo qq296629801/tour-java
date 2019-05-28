@@ -1,10 +1,7 @@
 package cn.ymsys.api.common.util;
 
-import cn.ymsys.api.common.model.Basics;
-import cn.ymsys.api.common.model._MappingKit;
-import cn.ymsys.api.service.BasicsService;
-import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
-import com.jfinal.plugin.druid.DruidPlugin;
+import cn.ymsys.api.model.Basic;
+import cn.ymsys.api.repository.BasicRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,14 +9,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.List;
 
 @Component
 @Configuration
 public class BasicsUtil {
-    private static HashMap<String, Basics> ALL_BASICS_PARAMETERS = new HashMap<String, Basics>();
+    private static HashMap<String, Basic> ALL_BASICS_PARAMETERS = new HashMap<>();
     @Value("${spring.datasource.url}")
     private String url;
     @Value("${spring.datasource.username}")
@@ -27,34 +23,25 @@ public class BasicsUtil {
     @Value("${spring.datasource.password}")
     private String password;
     @Autowired
-    private BasicsService basicsService;
+    private BasicRepository basicRepository;
 
-    private DataSource getDataSource() {
-        DruidPlugin druidPlugin = new DruidPlugin(url,
-                username, password);
-        druidPlugin.start();
-        return druidPlugin.getDataSource();
-    }
 
     @PostConstruct
-    private void loadBasics() {
-        ActiveRecordPlugin arp = new ActiveRecordPlugin(getDataSource());
-        _MappingKit.mapping(arp);
-        arp.start();
+    private void load() {
         ALL_BASICS_PARAMETERS.clear();
-        List<Basics> sysParameters = basicsService.findAll();
+        List<Basic> sysParameters = basicRepository.findAll();
         if (DataUtil.isNotEmpty(sysParameters)) {
-            for (Basics sysParameter : sysParameters) {
-                if (StringUtils.isBlank(sysParameter.getKeyy()))
+            for (Basic sysParameter : sysParameters) {
+                if (StringUtils.isBlank(sysParameter.getKey()))
                     continue;
-                ALL_BASICS_PARAMETERS.put(sysParameter.getKeyy(), sysParameter);
+                ALL_BASICS_PARAMETERS.put(sysParameter.getKey(), sysParameter);
             }
         }
     }
 
-    public static Basics find(String key) {
+    public Basic findByKey(String key) {
         if (StringUtils.isNotBlank(key)) {
-            Basics param = ALL_BASICS_PARAMETERS.get(key);
+            Basic param = ALL_BASICS_PARAMETERS.get(key);
             if (DataUtil.isNotNull(param))
                 return param;
         }
