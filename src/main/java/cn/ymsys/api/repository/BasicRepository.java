@@ -1,13 +1,25 @@
 package cn.ymsys.api.repository;
 
+import cn.ymsys.api.common.util.MongoAutoidUtil;
 import cn.ymsys.api.model.Basic;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
-import org.springframework.data.domain.Page;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Repository;
 
-public interface BasicRepository extends PagingAndSortingRepository<Basic, String> {
-    //分页查询
-    Page<Basic> findAll(SpringDataWebProperties.Pageable pageable);
+@Repository
+public class BasicRepository {
+    @Autowired
+    private MongoTemplate mongoTemplate;
+    @Autowired
+    private MongoAutoidUtil mongoAutoidUtil;
 
-    void add(Basic basic);
+    public void add(Basic basic) {
+        basic.setId(mongoAutoidUtil.getNextSequence(Basic.class.getSimpleName()));
+        mongoTemplate.save(basic);
+    }
+
+    public Iterable<Basic> findAll() {
+        return mongoTemplate.findAll(Basic.class);
+    }
+
 }
