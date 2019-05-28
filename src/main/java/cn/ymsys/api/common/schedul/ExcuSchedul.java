@@ -25,7 +25,7 @@ public class ExcuSchedul {
     @Scheduled(fixedDelay = 1000, initialDelay = 0)
     public void execute() {
         try {
-            baiduOrcService.handleEvent("BusinessLicenseOCR");
+            // baiduOrcService.handleEvent("BusinessLicenseOCR");
         } catch (Throwable e) {
             log.error("后台运行调度捕获未知异常", e);
         }
