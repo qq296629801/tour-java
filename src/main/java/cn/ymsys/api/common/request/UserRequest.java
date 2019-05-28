@@ -1,4 +1,9 @@
 package cn.ymsys.api.common.request;
 
-public class UserRequest {
+import cn.ymsys.api.common.util.PagerUtil;
+import lombok.Data;
+
+@Data
+public class UserRequest extends PagerUtil {
+    private Integer id;
 }

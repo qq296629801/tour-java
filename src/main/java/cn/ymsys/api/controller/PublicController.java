@@ -21,7 +21,7 @@ public class PublicController {
     @ApiComment("上传")
     @RequestMapping("/upload")
     public JsonResponse handleFileUpload(@RequestParam("file") MultipartFile file) {
-        return JsonResponse.build(fileService.save(file));
+        return JsonResponse.success(fileService.save(file));
     }
 
 }

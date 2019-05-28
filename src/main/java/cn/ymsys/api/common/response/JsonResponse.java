@@ -27,9 +27,9 @@ public class JsonResponse extends LinkedHashMap<String, Object> implements Seria
         this.put(JSON_KEY_ERROR_HINT, e.getHint());
     }
 
-    public static JsonResponse build(Object data) {
+    public static JsonResponse success(Object data) {
         if (data instanceof RootModel) {
-            return build(((RootModel) data));
+            return success(((RootModel) data));
         }
 
         return new JsonResponse(data);
@@ -39,11 +39,11 @@ public class JsonResponse extends LinkedHashMap<String, Object> implements Seria
         return new JsonResponse(DataUtil.toJSONObject(data));
     }
 
-    public static JsonResponse build(RootModel data) {
+    public static JsonResponse success(RootModel data) {
         return new JsonResponse(data.toJSON());
     }
 
-    public static JsonResponse build(OwnException e) {
+    public static JsonResponse success(OwnException e) {
         return new JsonResponse(e);
     }
 }
