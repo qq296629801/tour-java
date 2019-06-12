@@ -1,5 +1,6 @@
 package cn.ymsys.api.model;
 
+import cn.ymsys.api.common.util.PagerUtil;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-public class Trends {
+public class Trends extends PagerUtil {
     private String id;
     private User user;
     private String address;
@@ -19,5 +20,7 @@ public class Trends {
     private Date lastUpdateTime;
     private String lastUpdateUser;
     private boolean like;
+    private int userId;
+    private int status;
     private List<Photo> imgs = new ArrayList<>();
 }
