@@ -12,7 +12,7 @@ public class TrendsService {
     @Autowired
     private TrendsRepository trendsRepository;
 
-    public Trends register(Trends trends) {
+    public Trends add(Trends trends) {
         return trendsRepository.save(trends);
     }
 

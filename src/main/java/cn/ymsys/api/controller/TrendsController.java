@@ -22,7 +22,7 @@ public class TrendsController {
     @ApiComment("发布动态")
     @RequestMapping("/add")
     public JsonResponse add(@ApiComment("动态") @RequestBody Trends trends) {
-        return JsonResponse.success(trendsService.register(trends));
+        return JsonResponse.success(trendsService.add(trends));
     }
 
     @Api2Doc(order = 2)

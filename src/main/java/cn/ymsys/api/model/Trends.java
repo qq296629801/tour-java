@@ -22,5 +22,5 @@ public class Trends extends PagerUtil {
     private boolean like;
     private int userId;
     private int status;
-    private List<Photo> imgs = new ArrayList<>();
+    private List<String> imgs = new ArrayList<String>();
 }
