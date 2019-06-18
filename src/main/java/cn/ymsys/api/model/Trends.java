@@ -9,7 +9,6 @@ import java.util.List;
 
 @Data
 public class Trends extends PagerUtil {
-    private String id;
     private User user;
     private String address;
     private String name;
