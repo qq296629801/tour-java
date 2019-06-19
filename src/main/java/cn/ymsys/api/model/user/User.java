@@ -37,6 +37,6 @@ public class User extends PagerUtil implements Serializable {
     private String createUser;
     private Date lastUpdateTime;
     private String lastUpdateUser;
-    private List<WorkExperience> wrkExperiences = new ArrayList<WorkExperience>();
+    private List<WorkExperience> workExperiences = new ArrayList<WorkExperience>();
     private List<StudyExperience> studyExperiences = new ArrayList<StudyExperience>();
 }
