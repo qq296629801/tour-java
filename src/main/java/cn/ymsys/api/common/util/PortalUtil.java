@@ -4,7 +4,7 @@ import cn.ymsys.api.common.authentication.JWTUtil;
 import cn.ymsys.api.common.domain.PortalConstant;
 import cn.ymsys.api.common.domain.QueryRequest;
 import cn.ymsys.api.common.function.CacheSelector;
-import cn.ymsys.api.model.User;
+import cn.ymsys.api.model.user.User;
 import cn.ymsys.api.repository.UserRepository;
 import cn.ymsys.api.service.CacheService;
 import lombok.extern.slf4j.Slf4j;

@@ -3,7 +3,7 @@ package cn.ymsys.api.service;
 import cn.ymsys.api.common.exception.PortalException;
 import cn.ymsys.api.common.response.user.UserResponse;
 import cn.ymsys.api.common.util.DataUtil;
-import cn.ymsys.api.model.User;
+import cn.ymsys.api.model.user.User;
 import cn.ymsys.api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

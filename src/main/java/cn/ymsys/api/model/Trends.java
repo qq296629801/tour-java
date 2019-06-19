@@ -1,6 +1,7 @@
 package cn.ymsys.api.model;
 
 import cn.ymsys.api.common.util.PagerUtil;
+import cn.ymsys.api.model.user.User;
 import lombok.Data;
 
 import java.util.ArrayList;

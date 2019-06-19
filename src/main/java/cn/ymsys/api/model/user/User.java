@@ -1,4 +1,4 @@
-package cn.ymsys.api.model;
+package cn.ymsys.api.model.user;
 
 import cn.ymsys.api.common.util.PagerUtil;
 import lombok.Data;

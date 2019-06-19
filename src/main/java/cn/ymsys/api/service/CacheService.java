@@ -1,6 +1,6 @@
 package cn.ymsys.api.service;
 
-import cn.ymsys.api.model.User;
+import cn.ymsys.api.model.user.User;
 import org.apache.catalina.startup.UserConfig;
 
 public interface CacheService {

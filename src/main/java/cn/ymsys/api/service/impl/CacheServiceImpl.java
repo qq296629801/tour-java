@@ -1,7 +1,7 @@
 package cn.ymsys.api.service.impl;
 
 import cn.ymsys.api.common.domain.PortalConstant;
-import cn.ymsys.api.model.User;
+import cn.ymsys.api.model.user.User;
 import cn.ymsys.api.repository.UserRepository;
 import cn.ymsys.api.service.CacheService;
 import cn.ymsys.api.service.RedisService;

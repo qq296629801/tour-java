@@ -1,7 +1,7 @@
 package cn.ymsys.api.controller;
 
 import cn.ymsys.api.common.response.JsonResponse;
-import cn.ymsys.api.model.User;
+import cn.ymsys.api.model.user.User;
 import cn.ymsys.api.service.UserService;
 import com.terran4j.commons.api2doc.annotations.Api2Doc;
 import com.terran4j.commons.api2doc.annotations.ApiComment;

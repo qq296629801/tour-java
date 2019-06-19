@@ -1,7 +1,7 @@
 package cn.ymsys.api.common.response.user;
 
 import cn.ymsys.api.common.enums.RoleEnum;
-import cn.ymsys.api.model.User;
+import cn.ymsys.api.model.user.User;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
