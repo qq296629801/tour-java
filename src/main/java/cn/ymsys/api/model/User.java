@@ -5,12 +5,14 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Accessors(chain = true)
 public class User extends PagerUtil implements Serializable {
-    private String id;
+    private int id;
     private String userName;
     private String password;
     private String nickName;
@@ -18,12 +20,23 @@ public class User extends PagerUtil implements Serializable {
     private int sex;
     private String avator;
     private int roleId;
+    private Role role;
     private int status;
+    private boolean display;
+    private Date birthday;
+    private String companyName;
+    private String deptDuty;
+    private String email;
     private String address;
+    private String wechat;
+    private String qq;
+    private String city;
     private String url;
     private String openId;
     private Date createTime;
     private String createUser;
     private Date lastUpdateTime;
     private String lastUpdateUser;
+    private List<WorkExperience> wrkExperiences = new ArrayList<WorkExperience>();
+    private List<StudyExperience> studyExperiences = new ArrayList<StudyExperience>();
 }
