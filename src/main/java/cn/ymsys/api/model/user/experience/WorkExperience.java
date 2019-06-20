@@ -1,4 +1,4 @@
-package cn.ymsys.api.model.user.Experience;
+package cn.ymsys.api.model.user.experience;
 
 import lombok.Data;
 

@@ -1,8 +1,8 @@
 package cn.ymsys.api.model.user;
 
 import cn.ymsys.api.common.util.PagerUtil;
-import cn.ymsys.api.model.user.Experience.WorkExperience;
-import cn.ymsys.api.model.user.Experience.educationExperience;
+import cn.ymsys.api.model.user.experience.WorkExperience;
+import cn.ymsys.api.model.user.experience.educationExperience;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
