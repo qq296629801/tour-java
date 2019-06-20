@@ -3,7 +3,8 @@ package cn.ymsys.api.model.user;
 import lombok.Data;
 
 @Data
-public class Role {
+public class Menu {
     private int id;
-    private String RoleName;
+    private String name;
+    private String url;
 }

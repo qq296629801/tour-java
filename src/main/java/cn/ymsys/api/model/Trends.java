@@ -11,6 +11,7 @@ import java.util.List;
 @Data
 public class Trends extends PagerUtil {
     private User user;
+    private int userId;
     private String address;
     private String name;
     private String con;
@@ -20,7 +21,6 @@ public class Trends extends PagerUtil {
     private Date lastUpdateTime;
     private String lastUpdateUser;
     private boolean like;
-    private int userId;
     private int status;
     private List<String> imgs = new ArrayList<String>();
 }

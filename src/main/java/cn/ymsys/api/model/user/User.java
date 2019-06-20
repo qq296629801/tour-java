@@ -24,7 +24,7 @@ public class User extends PagerUtil implements Serializable {
     private int status;
     private boolean display;
     private Date birthday;
-    private String companyName;
+    private String company;
     private String deptDuty;
     private String email;
     private String address;
@@ -38,5 +38,5 @@ public class User extends PagerUtil implements Serializable {
     private Date lastUpdateTime;
     private String lastUpdateUser;
     private List<WorkExperience> workExperiences = new ArrayList<WorkExperience>();
-    private List<StudyExperience> studyExperiences = new ArrayList<StudyExperience>();
+    private List<educationExperience> educationExperiences = new ArrayList<educationExperience>();
 }
