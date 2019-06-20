@@ -10,7 +10,12 @@ public class Settled {
     private String phone;
     private String address;
     private String gps;
+    private String company;
+    private String category;
     private SettledType settledType;
     private int settledTypeId;
     private Date intoSettledTime;
+    private String businessPic;
+    private String logoPic;
+    private String legalPersonPic;
 }
