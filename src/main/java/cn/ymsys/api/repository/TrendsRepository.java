@@ -2,7 +2,7 @@ package cn.ymsys.api.repository;
 
 import cn.ymsys.api.common.exception.PortalException;
 import cn.ymsys.api.common.util.PagerUtil;
-import cn.ymsys.api.model.Dynamics;
+import cn.ymsys.api.model.post.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -18,19 +18,19 @@ public class TrendsRepository {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public Dynamics save(Dynamics trends) {
+    public Post save(Post trends) {
         mongoTemplate.save(trends);
         return trends;
     }
 
-    public List<Dynamics> query(Dynamics trends) {
+    public List<Post> query(Post trends) {
         try {
             PagerUtil.startPage(trends);
             Query query = new Query();
             query.addCriteria(where("userId").is(trends.getUserId()));
             query.addCriteria(where("status").is(0));
             query.with(new Sort(Sort.Direction.ASC, "createTime"));
-            return mongoTemplate.find(query, Dynamics.class);
+            return mongoTemplate.find(query, Post.class);
         } catch (Throwable e) {
             PagerUtil.clearPage(trends);
             throw new PortalException("", e);
