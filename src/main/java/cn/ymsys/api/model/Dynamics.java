@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-public class Trends extends PagerUtil {
+public class Dynamics extends PagerUtil {
     private User user;
     private int userId;
     private String address;

@@ -2,7 +2,7 @@ package cn.ymsys.api.controller;
 
 import cn.ymsys.api.common.response.JsonResponse;
 import cn.ymsys.api.common.response.PagerResponse;
-import cn.ymsys.api.model.Trends;
+import cn.ymsys.api.model.Dynamics;
 import cn.ymsys.api.service.TrendsService;
 import com.terran4j.commons.api2doc.annotations.Api2Doc;
 import com.terran4j.commons.api2doc.annotations.ApiComment;
@@ -21,14 +21,14 @@ public class TrendsController {
     @Api2Doc(order = 1)
     @ApiComment("发布动态")
     @RequestMapping("/add")
-    public JsonResponse add(@ApiComment("动态") @RequestBody Trends trends) {
+    public JsonResponse add(@ApiComment("动态") @RequestBody Dynamics trends) {
         return JsonResponse.success(trendsService.add(trends));
     }
 
     @Api2Doc(order = 2)
     @ApiComment("动态列表")
     @RequestMapping("/query")
-    public JsonResponse query(@ApiComment("动态") @RequestBody Trends trends) {
+    public JsonResponse query(@ApiComment("动态") @RequestBody Dynamics trends) {
         return PagerResponse.success(trendsService.query(trends), trends);
     }
 }
