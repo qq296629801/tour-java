@@ -1,6 +1,8 @@
 package cn.ymsys.api.model.user;
 
 import cn.ymsys.api.common.util.PagerUtil;
+import cn.ymsys.api.model.user.Experience.WorkExperience;
+import cn.ymsys.api.model.user.Experience.educationExperience;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -19,8 +21,6 @@ public class User extends PagerUtil implements Serializable {
     private String phone;
     private int sex;
     private String avator;
-    private int roleId;
-    private Role role;
     private int status;
     private boolean display;
     private Date birthday;
