@@ -1,7 +1,5 @@
 # Summary
 
-## 目录
-
 ## 小程序
 
 * [1.1介绍](README.md)
@@ -11,4 +9,6 @@
   * [1.2.2项目](interface/122xiang-mu.md)
   * [1.2.3用户](interface/123yong-hu.md)
   * [1.2.4文章](interface/124wen-zhang.md)
+
+## 目录
 
