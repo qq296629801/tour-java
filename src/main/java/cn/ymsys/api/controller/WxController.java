@@ -1,36 +1,21 @@
 package cn.ymsys.api.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import com.terran4j.commons.api2doc.annotations.Api2Doc;
-import com.terran4j.commons.api2doc.annotations.ApiComment;
-import org.springframework.beans.factory.annotation.Autowired;
+import cn.ymsys.api.common.util.Const;
+import cn.ymsys.api.common.util.HttpClientUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.ymsys.api.common.util.Const;
-import cn.ymsys.api.common.util.HttpClientUtils;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/wx")
-@Api2Doc(id = "wx", name = "微信认证", order = 1)
 public class WxController {
-    @Autowired
-    private HttpServletRequest request;
-    @Autowired
-    private HttpServletResponse response;
-
     private final String url = "https://api.weixin.qq.com/sns/jscode2session";
 
-    @Api2Doc(order = 1)
-    @ApiComment("登录")
     @RequestMapping("/login")
-    public Map<String, Object> login(@ApiComment("代码") @RequestParam(required = false) String code) {
+    public Map<String, Object> login(@RequestParam(required = false) String code) {
 
         HttpClientUtils httpClientUtils = new HttpClientUtils();
         Map<String, String> parm = new HashMap<>();
