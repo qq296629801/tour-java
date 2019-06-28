@@ -1,4 +1,4 @@
-package cn.ymsys.api.model.live;
+package cn.ymsys.api.orm.model.live;
 
 import lombok.Data;
 

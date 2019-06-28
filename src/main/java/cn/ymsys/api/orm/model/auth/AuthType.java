@@ -1,4 +1,4 @@
-package cn.ymsys.api.model.auth;
+package cn.ymsys.api.orm.model.auth;
 
 import lombok.Data;
 

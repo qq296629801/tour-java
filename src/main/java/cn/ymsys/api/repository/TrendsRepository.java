@@ -2,7 +2,7 @@ package cn.ymsys.api.repository;
 
 import cn.ymsys.api.common.exception.PortalException;
 import cn.ymsys.api.common.util.PagerUtil;
-import cn.ymsys.api.model.post.Post;
+import cn.ymsys.api.orm.model.post.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;

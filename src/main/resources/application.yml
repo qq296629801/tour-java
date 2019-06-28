@@ -23,6 +23,35 @@ spring:
       host: 127.0.0.1
       port: 27017
       database: play
+
+
+tour:
+  #数据源配置
+  db-datasource:
+    name: lambda-portal
+    url: jdbc:mysql://127.0.0.1:3306/tour?serverTimezone=GMT%2B8&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useAffectedRows=true&useSSL=false
+    username: root
+    password: 123456
+    driverClassName: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.xa.DruidXADataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 500
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    validationQueryTimeout: 10000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+    filters:
+      commons-log.connection-logger-name: stat,wall,log4j
+
 # redis
 lambda-portal:
   redis-datasource:

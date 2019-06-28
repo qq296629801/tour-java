@@ -1,7 +1,7 @@
 package cn.ymsys.api.controller;
 
 import cn.ymsys.api.common.response.JsonResponse;
-import cn.ymsys.api.model.user.User;
+import cn.ymsys.api.orm.model.user.User;
 import cn.ymsys.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +28,4 @@ public class UserController {
         return null; // TODO: 还未实现。
     }
 
-    @RequestMapping("/querys")
-    public JsonResponse getUsers(@RequestBody User user) {
-        return JsonResponse.success(userService.findByRole(user));
-    }
 }

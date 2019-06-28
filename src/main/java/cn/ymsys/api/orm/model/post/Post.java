@@ -1,7 +1,6 @@
-package cn.ymsys.api.model.post;
+package cn.ymsys.api.orm.model.post;
 
 import cn.ymsys.api.common.util.PagerUtil;
-import cn.ymsys.api.model.user.User;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -10,7 +9,6 @@ import java.util.List;
 
 @Data
 public class Post extends PagerUtil {
-    private User user;
     private int userId;
     private String address;
     private String name;

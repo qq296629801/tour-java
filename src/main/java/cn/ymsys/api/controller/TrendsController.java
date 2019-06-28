@@ -2,7 +2,7 @@ package cn.ymsys.api.controller;
 
 import cn.ymsys.api.common.response.JsonResponse;
 import cn.ymsys.api.common.response.PagerResponse;
-import cn.ymsys.api.model.post.Post;
+import cn.ymsys.api.orm.model.post.Post;
 import cn.ymsys.api.service.TrendsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;

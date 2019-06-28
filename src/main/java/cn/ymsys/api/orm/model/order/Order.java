@@ -1,4 +1,4 @@
-package cn.ymsys.api.model.order;
+package cn.ymsys.api.orm.model.order;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package cn.ymsys.api.model.product;
+package cn.ymsys.api.orm.model.product;
 
 import lombok.Data;
 
