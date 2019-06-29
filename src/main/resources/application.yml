@@ -28,7 +28,7 @@ spring:
 tour:
   #数据源配置
   db-datasource:
-    name: lambda-portal
+    name: tour
     url: jdbc:mysql://127.0.0.1:3306/tour?serverTimezone=GMT%2B8&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useAffectedRows=true&useSSL=false
     username: root
     password: 123456
@@ -51,9 +51,7 @@ tour:
     useGlobalDataSourceStat: true
     filters:
       commons-log.connection-logger-name: stat,wall,log4j
-
-# redis
-lambda-portal:
+  # redis
   redis-datasource:
     host: 127.0.0.1
     port: 6379

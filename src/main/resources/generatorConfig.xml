@@ -17,7 +17,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaModelGenerator>
         <!-- 生成映射文件的包名和位置 -->
-        <sqlMapGenerator targetPackage="xml"
+        <sqlMapGenerator targetPackage="sqlmapper"
                          targetProject="./src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
@@ -29,7 +29,7 @@
         </javaClientGenerator>
 
         <!-- 要生成哪些表 -->
-        <table tableName="sys_user" domainObjectName="User">
+        <table tableName="%">
             <property name="ignoreQualifiersAtRuntime" value="true"/>
         </table>
     </context>

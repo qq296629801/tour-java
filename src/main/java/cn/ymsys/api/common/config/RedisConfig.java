@@ -33,24 +33,24 @@ import java.util.Arrays;
 @Configuration
 public class RedisConfig extends CachingConfigurerSupport /*implements TransactionManagementConfigurer*/ {
 
-    @Value("${lambda-portal.redis-datasource.host}")
+    @Value("${tour.redis-datasource.host}")
     private String host;
 
-    @Value("${lambda-portal.redis-datasource.port}")
+    @Value("${tour.redis-datasource.port}")
     private int port;
 
-    @Value("${lambda-portal.redis-datasource.password}")
+    @Value("${tour.redis-datasource.password}")
     private String password;
 
-    @Value("${lambda-portal.redis-datasource.timeout}")
+    @Value("${tour.redis-datasource.timeout}")
     private int timeout;
 
-    @Value("${lambda-portal.redis-datasource.jedis.pool.max-idle}")
+    @Value("${tour.redis-datasource.jedis.pool.max-idle}")
     private int maxIdle;
 
-    @Value("${lambda-portal.redis-datasource.jedis.pool.max-wait}")
+    @Value("${tour.redis-datasource.jedis.pool.max-wait}")
     private long maxWaitMillis;
-    @Value("${lambda-portal.redis-datasource.jedis.pool.max-total}")
+    @Value("${tour.redis-datasource.jedis.pool.max-total}")
     private int maxTotal;
 
     @Bean

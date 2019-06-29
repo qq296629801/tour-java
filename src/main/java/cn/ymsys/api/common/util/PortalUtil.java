@@ -4,9 +4,8 @@ import cn.ymsys.api.common.authentication.JWTUtil;
 import cn.ymsys.api.common.domain.PortalConstant;
 import cn.ymsys.api.common.domain.QueryRequest;
 import cn.ymsys.api.common.function.CacheSelector;
-import cn.ymsys.api.model.user.User;
-import cn.ymsys.api.repository.UserRepository;
 import cn.ymsys.api.service.CacheService;
+import cn.ymsys.api.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
@@ -69,21 +68,12 @@ public class PortalUtil {
      *
      * @return 用户信息
      */
-    public static User getCurrentUser() {
+    public static <T> T getCurrentUser() {
         String token = (String) SecurityUtils.getSubject().getPrincipal();
         String username = JWTUtil.getUsername(token);
-        UserRepository userRepository = SpringContextUtil.getBean(UserRepository.class);
+        UserService userService = SpringContextUtil.getBean(UserService.class);
         CacheService cacheService = SpringContextUtil.getBean(CacheService.class);
-        return selectCacheByTemplate(() -> cacheService.getUser(username), () -> userRepository.findByName(username), username + "_user");
-    }
-
-    /**
-     * 获取当前操作用户名
-     *
-     * @return 用户信息
-     */
-    public static String getCurrentUserName() {
-        return getCurrentUser().getUserName();
+        return selectCacheByTemplate(() -> cacheService.getUser(username), () -> userService.getUser(username), username + "_user");
     }
 
     /**
