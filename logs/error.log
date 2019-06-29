@@ -1,0 +1,147 @@
+2019-06-29 11:21:49,927 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method org.apache.ibatis.session.Configuration.getSqlFragments()Ljava/util/Map; but it does not exist. Its class, org.apache.ibatis.session.Configuration, is available from the following locations:
+
+    jar:file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar!/org/apache/ibatis/session/Configuration.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.ibatis.session.Configuration
+
+2019-06-29 11:25:19,488 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method org.apache.ibatis.session.Configuration.getSqlFragments()Ljava/util/Map; but it does not exist. Its class, org.apache.ibatis.session.Configuration, is available from the following locations:
+
+    jar:file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar!/org/apache/ibatis/session/Configuration.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.ibatis.session.Configuration
+
+2019-06-29 11:51:25,010 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method org.apache.ibatis.session.Configuration.getSqlFragments()Ljava/util/Map; but it does not exist. Its class, org.apache.ibatis.session.Configuration, is available from the following locations:
+
+    jar:file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar!/org/apache/ibatis/session/Configuration.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.ibatis.session.Configuration
+
+2019-06-29 11:59:25,214 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method org.apache.ibatis.session.Configuration.getSqlFragments()Ljava/util/Map; but it does not exist. Its class, org.apache.ibatis.session.Configuration, is available from the following locations:
+
+    jar:file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar!/org/apache/ibatis/session/Configuration.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.ibatis.session.Configuration
+
+2019-06-29 12:01:31,044 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method org.apache.ibatis.session.Configuration.getSqlFragments()Ljava/util/Map; but it does not exist. Its class, org.apache.ibatis.session.Configuration, is available from the following locations:
+
+    jar:file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar!/org/apache/ibatis/session/Configuration.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.ibatis.session.Configuration
+
+2019-06-29 16:47:01,407 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method org.apache.ibatis.session.Configuration.getSqlFragments()Ljava/util/Map; but it does not exist. Its class, org.apache.ibatis.session.Configuration, is available from the following locations:
+
+    jar:file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar!/org/apache/ibatis/session/Configuration.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.ibatis.session.Configuration
+
+2019-06-29 17:04:42,534 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method org.apache.ibatis.session.Configuration.getSqlFragments()Ljava/util/Map; but it does not exist. Its class, org.apache.ibatis.session.Configuration, is available from the following locations:
+
+    jar:file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar!/org/apache/ibatis/session/Configuration.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/mjy/.m2/repository/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.ibatis.session.Configuration
+

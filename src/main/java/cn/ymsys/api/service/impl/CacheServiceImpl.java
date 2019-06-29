@@ -49,7 +49,7 @@ public class CacheServiceImpl implements CacheService {
 
     @Override
     public void saveUser(User user) throws Exception {
-        String username = user.getUserName().toLowerCase();
+        String username = user.getUsername().toLowerCase();
         this.deleteUser(username);
         redisService.set(PortalConstant.USER_CACHE_PREFIX + username, mapper.writeValueAsString(user));
     }

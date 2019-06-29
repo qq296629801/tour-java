@@ -29,8 +29,12 @@
         </javaClientGenerator>
 
         <!-- 要生成哪些表 -->
-        <table tableName="%">
+        <!--<table tableName="%">
             <property name="ignoreQualifiersAtRuntime" value="true"/>
+        </table>-->
+        <table tableName="t_user" domainObjectName="User">
+            <property name="ignoreQualifiersAtRuntime" value="true"/>
+            <generatedKey column="USER_ID" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>
 </generatorConfiguration>
