@@ -38,8 +38,8 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
-        PortalProperties lambdaPortalProperties = SpringContextUtil.getBean(PortalProperties.class);
-        String[] anonUrl = StringUtils.splitByWholeSeparatorPreserveAllTokens(lambdaPortalProperties.getShiro().getAnonUrl(), ",");
+        PortalProperties portalProperties = SpringContextUtil.getBean(PortalProperties.class);
+        String[] anonUrl = StringUtils.splitByWholeSeparatorPreserveAllTokens(portalProperties.getShiro().getAnonUrl(), ",");
         for (String u : anonUrl) {
             if (pathMatcher.match(u, httpServletRequest.getRequestURI()))
                 return true;

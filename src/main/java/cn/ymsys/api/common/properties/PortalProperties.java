@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties(prefix = "lambda-portal")
+@ConfigurationProperties(prefix = "tour")
 public class PortalProperties {
 
     private ShiroProperties shiro = new ShiroProperties();

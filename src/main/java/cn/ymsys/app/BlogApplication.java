@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
 
-@ComponentScan("cn.ymsys.api.*")
+@ComponentScan({"cn.ymsys.api.*"})
 @SpringBootApplication
 @EnableAsync
 public class BlogApplication {

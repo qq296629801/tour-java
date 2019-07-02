@@ -22,7 +22,7 @@ import java.util.Properties;
 
 @Configuration("coreMybatisConfig")
 @MapperScan(
-        basePackages = {"cn.ymsys.api.orm.mapper", "cn.ymsys.api.orm.orm.extend"},
+        basePackages = {"cn.ymsys.api.orm.mapper"},
         sqlSessionFactoryRef = "coreSqlSessionFactory"
 )
 public class MyBatisConfig {
@@ -62,7 +62,7 @@ public class MyBatisConfig {
     public SqlSessionFactory sqlSessionFactory(@Qualifier("coreDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:/sqlmapper/*Mapper.xml"));
+        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:sqlmapper/*.xml"));
         bean.setPlugins(new Interceptor[]{getInterceptor()});
         return bean.getObject();
     }
