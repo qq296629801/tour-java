@@ -13,7 +13,7 @@ public class IndexController {
 
     @RequestMapping("/")
     public JsonResponse index() {
-        return JsonResponse.success("");
+        return JsonResponse.success(userService.find());
     }
 
 }
