@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 @EnableAsync
 public class BlogApplication {
-
+//sbj game over
     public static void main(String[] args) {
         SpringApplication.run(BlogApplication.class, args);
     }
