@@ -10,110 +10,243 @@ Target Server Type    : MYSQL
 Target Server Version : 50725
 File Encoding         : 65001
 
-Date: 2019-07-03 11:50:57
+Date: 2019-07-06 14:36:46
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for company
+-- Table structure for a_fans
 -- ----------------------------
-DROP TABLE IF EXISTS `company`;
-CREATE TABLE `company` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL COMMENT '用户ID',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of company
--- ----------------------------
-
--- ----------------------------
--- Table structure for co_product
--- ----------------------------
-DROP TABLE IF EXISTS `co_product`;
-CREATE TABLE `co_product` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `company_id` int(11) DEFAULT NULL COMMENT '公司ID',
-  `product_category_id` int(11) DEFAULT NULL COMMENT '产品分类',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of co_product
--- ----------------------------
-
--- ----------------------------
--- Table structure for live
--- ----------------------------
-DROP TABLE IF EXISTS `live`;
-CREATE TABLE `live` (
+DROP TABLE IF EXISTS `a_fans`;
+CREATE TABLE `a_fans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of live
+-- Records of a_fans
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for order
+-- Table structure for a_live
 -- ----------------------------
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE `order` (
+DROP TABLE IF EXISTS `a_live`;
+CREATE TABLE `a_live` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of order
+-- Records of a_live
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for post
+-- Table structure for a_talk
 -- ----------------------------
-DROP TABLE IF EXISTS `post`;
-CREATE TABLE `post` (
+DROP TABLE IF EXISTS `a_talk`;
+CREATE TABLE `a_talk` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of post
+-- Records of a_talk
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for project
+-- Table structure for b_activity
 -- ----------------------------
-DROP TABLE IF EXISTS `project`;
-CREATE TABLE `project` (
+DROP TABLE IF EXISTS `b_activity`;
+CREATE TABLE `b_activity` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='个人活动';
+
+-- ----------------------------
+-- Records of b_activity
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for b_card
+-- ----------------------------
+DROP TABLE IF EXISTS `b_card`;
+CREATE TABLE `b_card` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='名片';
+
+-- ----------------------------
+-- Records of b_card
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for b_comment
+-- ----------------------------
+DROP TABLE IF EXISTS `b_comment`;
+CREATE TABLE `b_comment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of project
+-- Records of b_comment
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for sys_base
+-- Table structure for b_company
 -- ----------------------------
-DROP TABLE IF EXISTS `sys_base`;
-CREATE TABLE `sys_base` (
+DROP TABLE IF EXISTS `b_company`;
+CREATE TABLE `b_company` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='公司（供应商）';
+
+-- ----------------------------
+-- Records of b_company
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for b_oauth
+-- ----------------------------
+DROP TABLE IF EXISTS `b_oauth`;
+CREATE TABLE `b_oauth` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of sys_base
+-- Records of b_oauth
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for user
+-- Table structure for b_order
 -- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (
+DROP TABLE IF EXISTS `b_order`;
+CREATE TABLE `b_order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pay_type` int(11) DEFAULT NULL COMMENT '支付类型 ：0 支付宝 1 微信',
+  `order_type` int(11) DEFAULT NULL COMMENT '订单类型: 0 认证  1  打赏',
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of b_order
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for b_order_details
+-- ----------------------------
+DROP TABLE IF EXISTS `b_order_details`;
+CREATE TABLE `b_order_details` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of b_order_details
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for b_post
+-- ----------------------------
+DROP TABLE IF EXISTS `b_post`;
+CREATE TABLE `b_post` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章（采购商）';
+
+-- ----------------------------
+-- Records of b_post
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for b_product
+-- ----------------------------
+DROP TABLE IF EXISTS `b_product`;
+CREATE TABLE `b_product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `co_product_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of b_product
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for b_project
+-- ----------------------------
+DROP TABLE IF EXISTS `b_project`;
+CREATE TABLE `b_project` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of b_project
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for s_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `s_menu`;
+CREATE TABLE `s_menu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of s_menu
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for s_parameter
+-- ----------------------------
+DROP TABLE IF EXISTS `s_parameter`;
+CREATE TABLE `s_parameter` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of s_parameter
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for s_role
+-- ----------------------------
+DROP TABLE IF EXISTS `s_role`;
+CREATE TABLE `s_role` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of s_role
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for s_role_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `s_role_menu`;
+CREATE TABLE `s_role_menu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of s_role_menu
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for s_user
+-- ----------------------------
+DROP TABLE IF EXISTS `s_user`;
+CREATE TABLE `s_user` (
   `USER_ID` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
   `USERNAME` varchar(50) NOT NULL COMMENT '用户名',
   `REALNAME` varchar(100) NOT NULL,
@@ -132,33 +265,20 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
--- Records of user
+-- Records of s_user
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for user_auth
+-- Table structure for s_user_role
 -- ----------------------------
-DROP TABLE IF EXISTS `user_auth`;
-CREATE TABLE `user_auth` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of user_auth
--- ----------------------------
-
--- ----------------------------
--- Table structure for user_role
--- ----------------------------
-DROP TABLE IF EXISTS `user_role`;
-CREATE TABLE `user_role` (
+DROP TABLE IF EXISTS `s_user_role`;
+CREATE TABLE `s_user_role` (
   `USER_ID` bigint(20) NOT NULL COMMENT '用户ID',
   `USER_ROLE` varchar(30) NOT NULL COMMENT '角色ID'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
--- Records of user_role
+-- Records of s_user_role
 -- ----------------------------
 
 -- ----------------------------
